@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.transition{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.transition:hover{
+    width: 500px;
+    background-color: aqua;
+}
+
+.preloader{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px double #00008B;
+    border-top-color:transparent;
+    margin: auto;
+    animation-name: preloader;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count:  infinite;
+    animation-direction: normal;
+
+}
+
+@keyframes preloader {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        border-right-color:chartreuse;
+    }
+    50%{
+        border-bottom-color: aqua;
+    }
+    75%{
+        border-left-color: blueviolet;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    margin-top: 20px;
+  }
+  
+  .wrapper {
+    width: 200px;
+    height: 200px;
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .line1 {
+    height: 100px;
+    margin: 0 8px;
+    width: 1px;
+    background-image: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #0000FF 50%,
+      #FF00FF 100%
+    );
+  
+    animation: dance 500ms ease infinite;
+  }
+  
+  .line1:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .line1:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  .line1:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  .line1:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  .line1:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  .line1:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  .line1:nth-child(8) {
+    animation-delay: 0.7s;
+  }
+  .line1:nth-child(9) {
+    animation-delay: 0.8s;
+  }
+  .line1:nth-child(10) {
+    animation-delay: 0.9s;
+  }
+  
+  @keyframes dance {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.3);
+    }
+  }
+
+
+  .wrapper2 {
+    position: relative;
+  }
+  
+  .line6 {
+    height: 100px;
+    margin: 0 9px;
+    width: 1px;
+    transform-origin: bottom;
+    background-image: linear-gradient(
+      180deg,
+      #ff0000 0%,
+      #ffffff 50%,
+      #FF00FF 100%
+    );
+  
+    animation: dance6 1s ease infinite;
+  }
+  
+  .dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-image: linear-gradient(
+      180deg,
+      red 0%,
+      #6284ff 50%,
+      #0000FF 100%
+    );
+    top: 40px;
+    left: 10px;
+    border-radius: 50%;
+    animation: moveDot 1s steps(10) infinite;
+  }
+  
+  .line6:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .line6:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  .line6:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  .line6:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  .line6:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  .line6:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  .line6:nth-child(8) {
+    animation-delay: 0.7s;
+  }
+  .line6:nth-child(9) {
+    animation-delay: 0.8s;
+  }
+  .line6:nth-child(10) {
+    animation-delay: 0.9s;
+  }
+  
+  @keyframes dance6 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.3);
+    }
+  }
+  
+  @keyframes moveDot {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(170px);
+    }
+  }
+  
